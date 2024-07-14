@@ -1378,9 +1378,12 @@ class EC2Connection(AWSQueryConnection):
         :return: Whether the operation succeeded or not
         """
         # Allow a bool to be passed in for value of disableApiTermination
-        bool_reqs = ('disableapitermination',
-                     'sourcedestcheck',
-                     'ebsoptimized')
+        bool_reqs = (
+            'disableapitermination',
+            'sourcedestcheck',
+            'ebsoptimized',
+            'rammoniroting',
+        )
         if attribute.lower() in bool_reqs:
             if isinstance(value, bool):
                 if value:
