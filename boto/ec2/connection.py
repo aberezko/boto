@@ -1382,7 +1382,7 @@ class EC2Connection(AWSQueryConnection):
             'disableapitermination',
             'sourcedestcheck',
             'ebsoptimized',
-            'rammonitoring',
+            'ram_monitoring',
         )
         if attribute.lower() in bool_reqs:
             if isinstance(value, bool):
